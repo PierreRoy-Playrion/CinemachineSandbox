@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: SampleSceneCameraBlends
   m_EditorClassIdentifier: 
   m_CustomBlends:
-  - m_From: FreeLookCamera
-    m_To: FocusVirtualCamera
+  - m_From: '**ANY CAMERA**'
+    m_To: '**ANY CAMERA**'
     m_Blend:
       m_Style: 7
       m_Time: 0.7
@@ -42,43 +42,32 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 0
-  - m_From: FocusVirtualCamera
-    m_To: FreeLookCamera
+  - m_From: FreeLookVCamera
+    m_To: FreeLookVCamera
     m_Blend:
       m_Style: 7
-      m_Time: 0.7
+      m_Time: 1
       m_CustomCurve:
         serializedVersion: 2
         m_Curve:
         - serializedVersion: 3
           time: 0
           value: 0
-          inSlope: 3.1501129
-          outSlope: 3.1501129
+          inSlope: 0
+          outSlope: 0
           tangentMode: 0
           weightedMode: 0
           inWeight: 0
-          outWeight: 0.031613976
+          outWeight: 0
         - serializedVersion: 3
           time: 1
           value: 1
-          inSlope: -0.016310621
-          outSlope: -0.016310621
+          inSlope: 0
+          outSlope: 0
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.15640599
+          inWeight: 0
           outWeight: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
-        m_RotationOrder: 0
-  - m_From: FocusVirtualCamera
-    m_To: FocusVirtualCamera
-    m_Blend:
-      m_Style: 1
-      m_Time: 0.5
-      m_CustomCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 0
-        m_PostInfinity: 0
         m_RotationOrder: 0
