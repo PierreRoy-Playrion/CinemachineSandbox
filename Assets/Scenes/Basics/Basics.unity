@@ -181,7 +181,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -273,7 +273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ShowDebugText: 0
+  m_ShowDebugText: 1
   m_ShowCameraFrustum: 1
   m_IgnoreTimeScale: 0
   m_WorldUpOverride: {fileID: 0}
@@ -305,6 +305,7 @@ GameObject:
   m_Component:
   - component: {fileID: 317036200}
   - component: {fileID: 317036201}
+  - component: {fileID: 317036202}
   m_Layer: 0
   m_Name: VirtualCamera (Follow Only)
   m_TagString: Untagged
@@ -347,7 +348,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_Follow: {fileID: 2054923373}
   m_Lens:
     FieldOfView: 45
     OrthographicSize: 5
@@ -367,6 +368,23 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 1137231075}
+--- !u!114 &317036202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317036199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 449ef5ebbe24720439ec31d15f7b6f3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FocusTracksTarget: 0
+  m_FocusTracking: 0
+  m_FocusTarget: {fileID: 0}
+  m_FocusOffset: 0
+  m_Profile: {fileID: 11400000, guid: a6560a915ef98420e9faacc1c7438823, type: 2}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -590,6 +608,7 @@ GameObject:
   m_Component:
   - component: {fileID: 568167264}
   - component: {fileID: 568167265}
+  - component: {fileID: 568167266}
   m_Layer: 0
   m_Name: VirtualCamera (Aim Only)
   m_TagString: Untagged
@@ -631,7 +650,7 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 0}
+  m_LookAt: {fileID: 2054923373}
   m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 45
@@ -652,6 +671,23 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 1399369164}
+--- !u!114 &568167266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 568167263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 449ef5ebbe24720439ec31d15f7b6f3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FocusTracksTarget: 0
+  m_FocusTracking: 0
+  m_FocusTarget: {fileID: 0}
+  m_FocusOffset: 0
+  m_Profile: {fileID: 11400000, guid: a6560a915ef98420e9faacc1c7438823, type: 2}
 --- !u!1 &792945144
 GameObject:
   m_ObjectHideFlags: 0
@@ -704,8 +740,8 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_LookAt: {fileID: 2054923373}
+  m_Follow: {fileID: 2054923373}
   m_Lens:
     FieldOfView: 45
     OrthographicSize: 5
@@ -734,27 +770,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 792945144}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Script: {fileID: 11500000, guid: 449ef5ebbe24720439ec31d15f7b6f3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: 0}
-  m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: 
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
+  m_FocusTracksTarget: 0
+  m_FocusTracking: 0
+  m_FocusTarget: {fileID: 0}
+  m_FocusOffset: 0
+  m_Profile: {fileID: 11400000, guid: a6560a915ef98420e9faacc1c7438823, type: 2}
 --- !u!1 &906011887
 GameObject:
   m_ObjectHideFlags: 0
@@ -894,8 +917,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1205403740}
-  - component: {fileID: 1205403742}
   - component: {fileID: 1205403743}
+  - component: {fileID: 1205403742}
   m_Layer: 0
   m_Name: CameraRig
   m_TagString: Untagged
@@ -1032,6 +1055,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 028851cf-0aa6-44ab-83e5-aaad94f2bbfc
     m_ActionName: FreeLookCamera/Zoom[/Mouse/scroll/y]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 87eb9c46-105f-4296-9386-bb9f008274d8
+    m_ActionName: Player/Brrrr[/Keyboard/space]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
@@ -1403,6 +1430,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1679040127}
   m_CullTransparentMesh: 1
+--- !u!4 &2054923373 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6995896636442593814, guid: 929d001bfd3d841d28f40b18268b0312,
+    type: 3}
+  m_PrefabInstance: {fileID: 524651631201990775}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &524651631201990775
 PrefabInstance:
   m_ObjectHideFlags: 0
