@@ -3,17 +3,17 @@ using UnityEngine;
 
 namespace CinemachineSandbox.Cameras
 {
-    [RequireComponent(typeof(CameraRig))]
+    [RequireComponent(typeof(AdvancedCameraRig))]
     public class BuildingFocus : MonoBehaviour
     {
         [SerializeField]
         private BuildingVariable _selectedBuilding;
 
-        private CameraRig _cameraRig;
+        private AdvancedCameraRig _cameraRig;
         
         private void Start()
         {
-            _cameraRig = GetComponent<CameraRig>();
+            _cameraRig = GetComponent<AdvancedCameraRig>();
             
             _selectedBuilding.Property
                 .Subscribe(OnSelectedBuildingValueChanged)

@@ -6,7 +6,7 @@ namespace CinemachineSandbox
     public class VehicleSelector : Selector<Vehicle>
     {
         [SerializeField]
-        private CameraRig _cameraRig;
+        private AdvancedCameraRig _cameraRig;
         
         protected override void OnDeselect(Vehicle selection)
         {

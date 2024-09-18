@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace CinemachineSandbox.Cameras
 {
-    public class CameraRig : MonoBehaviour
+    public class AdvancedCameraRig : MonoBehaviour
     {
         [SerializeField]
         private Camera _mainCamera;

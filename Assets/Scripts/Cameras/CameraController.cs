@@ -3,8 +3,8 @@ using UnityEngine.InputSystem;
 
 namespace CinemachineSandbox.Cameras
 {
-    [RequireComponent(typeof(CameraRig))]
     [RequireComponent(typeof(PlayerInput))]
+    [RequireComponent(typeof(AdvancedCameraRig))]
     public class CameraController : MonoBehaviour
     {
         [SerializeField]
@@ -23,14 +23,14 @@ namespace CinemachineSandbox.Cameras
         private float _zoomMax = 15;
         
         private PlayerInput _input;
-        private CameraRig _cameraRig;
+        private AdvancedCameraRig _cameraRig;
 
         private Vector3 _targetPosition;
         
         private void Awake()
         {
             _input = GetComponent<PlayerInput>();
-            _cameraRig = GetComponent<CameraRig>();
+            _cameraRig = GetComponent<AdvancedCameraRig>();
             _input.actions["CycleCamera"].performed += OnCycleCamera;
         }
 
