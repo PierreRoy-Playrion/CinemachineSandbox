@@ -80,6 +80,15 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Brrrr"",
+                    ""type"": ""Button"",
+                    ""id"": ""87eb9c46-105f-4296-9386-bb9f008274d8"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -366,6 +375,17 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""CycleCamera"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3e2523e7-4fe1-499e-bb16-1c58ce4d609f"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Brrrr"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1007,6 +1027,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_Player_Select = m_Player.FindAction("Select", throwIfNotFound: true);
         m_Player_Back = m_Player.FindAction("Back", throwIfNotFound: true);
         m_Player_CycleCamera = m_Player.FindAction("CycleCamera", throwIfNotFound: true);
+        m_Player_Brrrr = m_Player.FindAction("Brrrr", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1090,6 +1111,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Select;
     private readonly InputAction m_Player_Back;
     private readonly InputAction m_Player_CycleCamera;
+    private readonly InputAction m_Player_Brrrr;
     public struct PlayerActions
     {
         private @PlayerControls m_Wrapper;
@@ -1100,6 +1122,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         public InputAction @Select => m_Wrapper.m_Player_Select;
         public InputAction @Back => m_Wrapper.m_Player_Back;
         public InputAction @CycleCamera => m_Wrapper.m_Player_CycleCamera;
+        public InputAction @Brrrr => m_Wrapper.m_Player_Brrrr;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1127,6 +1150,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @CycleCamera.started += instance.OnCycleCamera;
             @CycleCamera.performed += instance.OnCycleCamera;
             @CycleCamera.canceled += instance.OnCycleCamera;
+            @Brrrr.started += instance.OnBrrrr;
+            @Brrrr.performed += instance.OnBrrrr;
+            @Brrrr.canceled += instance.OnBrrrr;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -1149,6 +1175,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @CycleCamera.started -= instance.OnCycleCamera;
             @CycleCamera.performed -= instance.OnCycleCamera;
             @CycleCamera.canceled -= instance.OnCycleCamera;
+            @Brrrr.started -= instance.OnBrrrr;
+            @Brrrr.performed -= instance.OnBrrrr;
+            @Brrrr.canceled -= instance.OnBrrrr;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -1391,6 +1420,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         void OnSelect(InputAction.CallbackContext context);
         void OnBack(InputAction.CallbackContext context);
         void OnCycleCamera(InputAction.CallbackContext context);
+        void OnBrrrr(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
