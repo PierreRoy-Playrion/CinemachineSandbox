@@ -31,18 +31,6 @@ namespace CinemachineSandbox.Cameras
         {
             _input = GetComponent<PlayerInput>();
             _cameraRig = GetComponent<AdvancedCameraRig>();
-            _input.actions["CycleCamera"].performed += OnCycleCamera;
-        }
-
-        private void OnCycleCamera(InputAction.CallbackContext context)
-        {
-            if (_cameraRig.FreeLookCamera.enabled)
-            {
-                return;
-            }
-            
-            _cameraRig.VehiclePovCamera.enabled = !_cameraRig.VehiclePovCamera.enabled;
-            _cameraRig.VehicleGroundCamera.enabled = !_cameraRig.VehicleGroundCamera.enabled;
         }
 
         private void Update()
